@@ -1,0 +1,118 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<head>
+    <link href="~/Content/style.css" rel="stylesheet">
+
+
+    <style>
+
+        .jumbotron{
+
+            background-image:url("img/pic01.jpg");
+        }
+    </style>
+</head>
+
+@{
+    if (@Session["userName"] != null)
+    {
+        <h3>Welcome @Session["userName"].ToString()</h3>
+    }
+}
+
+<div class="jumbotron" style="background-image:url(src="images/pic03.jpg")">
+    <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+    <h1>eCommerce Apparel</h1>
+    <p class="lead">Apparel is our passion. Let us make it yours..</p>
+    <p><a href="Home/Contact" class="btn btn-primary btn-lg">Contact Us &raquo;</a></p>
+</div>
+
+<figure>
+    <div class="fixed-wrap">
+        <div id="fixed">
+        </div>
+    </div>
+</figure>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="img/shirt1.jpg" alt="Denim Jeans" width="200" height="200">
+            <h1>Tailored Jeans</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><button id="shirtButton" onclick="add()">Add to Cart</button></p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="img/shorts1.png" alt="Denim Jeans" width="200" height="200">
+            <h1>Tailored Jeans</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><button id="shortsButton">Add to Cart</button></p>
+            
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="img/shoes1.jpg" alt="Denim Jeans" width="200" height="200">
+            <h1>Tailored Jeans</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the jeans..</p>
+            <p><button id="shoesButton">Add to Cart</button></p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function add() {
+            try
+            {
+                string sConnection;
+                sConnection = "Data Source=DESKTOP-7ICH5MT\APRESS_DEV1;Initial Catalog=17599075_PROG7311_POE;Integrated Security=True";
+
+                OleDbConnection dbConn;
+                dbConn = new OleDbConnection(sConnection);
+                dbConn.Open();
+
+                label1.Text = "Login Successful";
+                
+            }
+            catch
+            {
+                this.Hide();
+                MessageBox.Show("Connection Failed");
+                
+            }
+
+            string sql;
+            sql = "Select * From LOGIN Where USERNAME = "+usernameTextBox.Text+";";   // Note the two semicolons
+            OleDbCommand dbCmd = new OleDbCommand();
+            dbCmd.CommandText = sql;    // set command  SQL string
+            dbCmd.Connection = dbConn; // dbConn is connection object 
+
+            OleDbDataReader dr;
+            dr = dbCmd.ExecuteReader();
+
+            int count = 0;
+
+            while (dr.Read())
+            {
+                count += 1;
+                MessageBox.Show("Login successful");
+            }
+            if(count == 1)
+            {
+
+            }else if(count > 1)
+            {
+                MessageBox.Show("Duplicate values");
+            }
+          
+    }
+</script>
+

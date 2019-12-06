@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5e28ffc93303474c91c066d5803fbd34" Name="Diagram1">
+        <EntityTypeShape EntityType="PROG7311_POEModel.CART" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROG7311_POEModel.CATEGORY" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROG7311_POEModel.CUSTOMER" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROG7311_POEModel.EMPLOYEE" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROG7311_POEModel.ORDER" Width="1.5" PointX="5.25" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PROG7311_POEModel.PRODUCT" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <AssociationConnector Association="PROG7311_POEModel.FK__CART__ProdID__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="PROG7311_POEModel.FK__CART__USERNAME__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="PROG7311_POEModel.FK__PRODUCTS__CatID__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="PROG7311_POEModel.FK__ORDERS__ProdID__1920BF5C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

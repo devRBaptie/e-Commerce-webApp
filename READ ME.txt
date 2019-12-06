@@ -1,0 +1,27 @@
+17599075_PROG7311_POR_TASK2
+
+eCommerce Apparel.
+
+Anyone is able to browse the store and see what is avaliable.
+
+Customers and Employees can login into the site.
+
+Customers using :
+
+Username 	Password
+
+11111		pass1
+22222		pass2
+33333		pass3
+
+Once customers are signed in they can add to their cart and view their cart.
+
+Employees using:
+
+Username 	Password
+
+Emp101		epass1
+Emp102		epass2
+Emp103		epass3
+
+Once an emplpoyee is logged in they can see all purchased orders.

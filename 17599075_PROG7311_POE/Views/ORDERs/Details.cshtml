@@ -1,0 +1,42 @@
+﻿@model _17599075_PROG7311_POE.Models.ORDER
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ORDER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.catID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.catID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRODUCT.CatID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRODUCT.CatID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.USERNAME }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

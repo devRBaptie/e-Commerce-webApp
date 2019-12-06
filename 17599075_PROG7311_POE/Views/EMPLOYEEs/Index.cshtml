@@ -1,0 +1,79 @@
+﻿@model  _17599075_PROG7311_POE.Models.EMPLOYEE
+
+@{
+
+    Layout = null;
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Employee Login</title>
+    <style>
+        #login-div {
+            background-color: powderblue;
+            position: absolute;
+            left: 35%;
+            top: 35%;
+            border: 5px solid #ccc;
+            padding: 50px 50px
+        }
+
+        .field-validation-error {
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body style="background-color:lightgreen;">
+    <div id="login-div">
+        @using (Html.BeginForm("Autherize", "EMPLOYEEs", FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td></td>
+                    <td style="text-decoration: solid, underline">EMPLOYEE LOGIN<br /></td>
+                </tr>
+                <tr>
+                    <td>
+                        Username
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.EmpUsername)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.EmpUsername)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Password
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.EmpPassword)
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.ValidationMessageFor(model => model.EmpPassword)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" name="name" value="Login" />
+                    </td>
+                </tr>
+            </table>
+        }
+
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
